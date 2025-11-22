@@ -1,61 +1,63 @@
-// script.js – CORS-FIXED VERSION with Proxy
-const AIRTABLE_BASE = "YOUR_BASE_ID";        // e.g. appXXXXXXXXXXXXXX
-const AIRTABLE_TABLE = "Tools";              // change if you renamed
-const AIRTABLE_API_KEY = "YOUR_API_KEY";     // keep this secret!
+const tools = [
+    {name:"ChatGPT",cat:"writing",rate:"4.9",price:"Free / $20/mo",desc:"Best all-round AI chatbot",url:"https://chatgpt.com"},
+    {name:"Claude 3.5",cat:"writing",rate:"4.9",price:"Free / $20/mo",desc:"Strongest reasoning AI",url:"https://claude.ai"},
+    {name:"Gemini",cat:"writing",rate:"4.7",price:"Free",desc:"Google's fastest AI",url:"https://gemini.google.com"},
+    {name:"Midjourney",cat:"image",rate:"4.8",price:"$10/mo",desc:"Best AI art generator",url:"https://midjourney.com"},
+    {name:"Leonardo AI",cat:"image",rate:"4.7",price:"Free / $10/mo",desc:"Great for realistic images",url:"https://leonardo.ai"},
+    {name:"Flux",cat:"image",rate:"4.9",price:"Free",desc:"New open-source king",url:"https://blackforestlabs.ai"},
+    {name:"Runway Gen-3",cat:"video",rate:"4.8",price:"$12/mo",desc:"Best text-to-video",url:"https://runwayml.com"},
+    {name:"Pika Labs",cat:"video",rate:"4.6",price:"Free / $8/mo",desc:"Fast & fun video AI",url:"https://pika.art"},
+    {name:"Kling AI",cat:"video",rate:"4.7",price:"$20/mo",desc:"Hyper-realistic video",url:"https://kling.ai"},
+    {name:"GitHub Copilot",cat:"coding",rate:"4.9",price:"$10/mo",desc:"#1 AI coding assistant",url:"https://github.com/features/copilot"},
+    {name:"Cursor",cat:"coding",rate:"4.8",price:"Free / $20/mo",desc:"Full AI code editor",url:"https://cursor.sh"},
+    {name:"Replit Agent",cat:"coding",rate:"4.6",price:"Free tier",desc:"Build apps with AI",url:"https://replit.com"},
+    {name:"Perplexity",cat:"writing",rate:"4.8",price:"Free / $20/mo",desc:"AI search engine",url:"https://perplexity.ai"},
+    {name:"Notion AI",cat:"productivity",rate:"4.6",price:"$10/mo",desc:"AI inside Notion",url:"https://notion.so/product/ai"},
+    {name:"Mem.ai",cat:"productivity",rate:"4.7",price:"$10/mo",desc:"AI second brain",url:"https://mem.ai"},
+    {name:"ElevenLabs",cat:"video",rate:"4.9",price:"Free / $5/mo",desc:"Most realistic voice AI",url:"https://elevenlabs.io"},
+    {name:"Suno",cat:"video",rate:"4.7",price:"Free / $10/mo",desc:"AI music generator",url:"https://suno.ai"},
+    {name:"CapCut AI",cat:"video",rate:"4.6",price:"Free",desc:"Auto video editing",url:"https://capcut.com"},
+    {name:"Jasper",cat:"writing",rate:"4.5",price:"$39/mo",desc:"Marketing copy AI",url:"https://jasper.ai"},
+    {name:"Copy.ai",cat:"writing",rate:"4.5",price:"Free / $36/mo",desc:"Fast copy generator",url:"https://copy.ai"}
+    // Add more anytime – just copy a line
+];
 
-// Add this proxy URL (free, reliable for 2025)
-const PROXY_URL = 'https://cors-anywhere.herokuapp.com/';  // Or use 'https://api.allorigins.win/raw?url=' for better uptime
-const API_URL = `${PROXY_URL}https://api.airtable.com/v0/${AIRTABLE_BASE}/${AIRTABLE_TABLE}`;
+const tbody = document.querySelector("#tools-table tbody");
+const search = document.getElementById("search");
 
-let tools = [];
-
-async function loadTools() {
-    try {
-        // First, "request temporary access" to the proxy (only once per session)
-        await fetch(PROXY_URL + 'https://api.airtable.com', { method: 'GET' });
-        
-        const response = await fetch(`${API_URL}?api_key=${AIRTABLE_API_KEY}`);
-        if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        const data = await response.json();
-        tools = data.records.map(record => record.fields);
-        renderTools(tools);
-    } catch (err) {
-        console.error('Fetch error details:', err);  // Better logging
-        const tableBody = document.querySelector('#tools-table tbody');
-        tableBody.innerHTML = 
-            `<tr><td colspan="6">Loading tools... (Check console for details or try refreshing)</td></tr>`;
-    }
-}
-
-function renderTools(data) {
-    const tableBody = document.querySelector('#tools-table tbody');
-    if (data.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="6">No tools found – add some in Airtable!</td></tr>`;
-        return;
-    }
-    tableBody.innerHTML = '';
-    data.forEach(tool => {
-        const row = tableBody.insertRow();
+function render(data) {
+    tbody.innerHTML = "";
+    data.forEach(t => {
+        const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${tool.Name || 'N/A'}</td>
-            <td>${tool.Category || 'N/A'}</td>
-            <td>${tool.Rating || 'N/A'}</td>
-            <td>${tool.Pricing || 'N/A'}</td>
-            <td>${tool.Description || 'N/A'}</td>
-            <td><a href="${tool['URL (affiliate link)'] || '#'}" target="_blank" class="action">Visit →</a></td>
+            <td>${t.name}</td>
+            <td>${t.cat}</td>
+            <td>⭐ ${t.rate}</td>
+            <td>${t.price}</td>
+            <td>${t.desc}</td>
+            <td><a href="${t.url}" target="_blank" class="action">Visit →</a></td>
         `;
+        tbody.appendChild(row);
     });
 }
 
-// Search & filter (same as before)
-document.getElementById('search')?.addEventListener('input', (e) => {
-    const query = e.target.value.toLowerCase();
-    const filtered = tools.filter(t => 
-        (t.Name?.toLowerCase().includes(query)) || 
-        (t.Description?.toLowerCase().includes(query))
-    );
-    renderTools(filtered);
+document.querySelectorAll(".filters button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelector(".filters .active").classList.remove("active");
+        btn.classList.add("active");
+        const cat = btn.dataset.category;
+        render(cat === "all" ? tools : tools.filter(t => t.cat === cat));
+    });
 });
 
-// Run on load
-document.addEventListener('DOMContentLoaded', loadTools);
+search.addEventListener("input", e => {
+    const term = e.target.value.toLowerCase();
+    const filtered = tools.filter(t => 
+        t.name.toLowerCase().includes(term) || 
+        t.desc.toLowerCase().includes(term) || 
+        t.cat.includes(term)
+    );
+    render(filtered);
+});
+
+render(tools); // First load
