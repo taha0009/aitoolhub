@@ -1,236 +1,692 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best AI Tools 2025 - Top AI Tools Directory</title>
+    <meta name="description" content="Discover the best AI tools for writing, images, video, coding, and productivity. Updated weekly with ratings and reviews.">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2974605831306319" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <title>Best AI Tools 2025 - Top Writing, Image, Video & Coding AI Tools Directory</title>
-  <meta name="description" content="Comprehensive directory of the best AI tools in 2025. Discover top-rated AI tools for writing, image generation, video creation, coding, and productivity with detailed reviews, pricing, and free trials." />
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://aitoolhub-red.vercel.app/" />
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
 
-  <!-- Open Graph / Social sharing -->
-  <meta property="og:title" content="Best AI Tools 2025 - Comprehensive AI Tools Directory" />
-  <meta property="og:description" content="Discover curated list of top AI tools for writing, images, coding, video creation and productivity with weekly updates." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aitoolhub-red.vercel.app/" />
-  <meta property="og:image" content="https://aitoolhub-red.vercel.app/og-image.jpg" />
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+        }
 
-  <!-- Additional important meta tags -->
-  <meta name="author" content="AI Tool Hub">
-  <meta name="keywords" content="AI tools, artificial intelligence, AI writing tools, AI image generators, AI video tools, coding AI, productivity AI">
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-  <!-- Google AdSense Loader -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2974605831306319"
-    crossorigin="anonymous"></script>
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
 
-  <!-- JSON-LD Structured Data - Enhanced -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Best AI Tools 2025",
-    "description": "Comprehensive directory of the best AI tools for various tasks",
-    "url": "https://aitoolhub-red.vercel.app/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://aitoolhub-red.vercel.app/?search={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-  <style>
-    /* CSS will be inserted here */
-  </style>
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #search {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .filters button {
+            padding: 8px 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: transparent;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filters button:hover,
+        .filters button.active {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 20px;
+        }
+
+        .content-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .content-section h2 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .content-section h3 {
+            color: #4a5568;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .content-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tools Table */
+        .tools-table-container {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+
+        #tools-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        #tools-table th {
+            background: #f7fafc;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: #4a5568;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        #tools-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        #tools-table tr:hover {
+            background: #f7fafc;
+        }
+
+        .tool-name {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .writing { background: #bee3f8; color: #2c5282; }
+        .image { background: #fed7d7; color: #c53030; }
+        .video { background: #feebc8; color: #d69e2e; }
+        .coding { background: #c6f6d5; color: #276749; }
+        .productivity { background: #e9d8fd; color: #6b46c1; }
+
+        .rating {
+            color: #f59e0b;
+            font-weight: 600;
+        }
+
+        .pricing {
+            font-weight: 500;
+        }
+
+        .free { color: #38a169; }
+        .freemium { color: #d69e2e; }
+        .paid { color: #e53e3e; }
+
+        .visit-btn {
+            padding: 6px 16px;
+            background: #4299e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .visit-btn:hover {
+            background: #3182ce;
+        }
+
+        /* Ad Container */
+        .ad-container {
+            margin: 2rem auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #cbd5e0;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4a5568;
+            padding: 1.5rem 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            #tools-table {
+                font-size: 0.9rem;
+            }
+
+            #tools-table th,
+            #tools-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <nav class="main-nav">
-      <div class="nav-container">
-        <a href="/" class="logo">AI Tool Hub</a>
-        <ul class="nav-menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#privacy">Privacy Policy</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-container">
+                <a href="/" class="logo">AI Tool Hub</a>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#privacy">Privacy</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
 
-    <div class="hero">
-      <h1>Best AI Tools 2025</h1>
-      <p>Hand-picked AI tools for writing, images, coding, and productivity. Updated weekly with comprehensive reviews and testing.</p>
-      
-      <!-- Added introductory content for better content depth -->
-      <div class="intro-content">
-        <p>Welcome to the most comprehensive AI tools directory for 2025. We test and review hundreds of AI tools to bring you the best options for your specific needs. Our team of experts evaluates each tool based on performance, ease of use, pricing, and real-world applications.</p>
-      </div>
-      
-      <input type="text" id="search" placeholder="Search tools... (e.g. writing, free)" aria-label="Search AI tools" />
-      <div class="filters">
-        <button data-category="all" class="active">All Tools</button>
-        <button data-category="writing">Writing & Content</button>
-        <button data-category="image">Image Generation</button>
-        <button data-category="video">Video Creation</button>
-        <button data-category="coding">Development & Coding</button>
-        <button data-category="productivity">Productivity</button>
-      </div>
-    </div>
-  </header>
+        <div class="hero">
+            <h1>Best AI Tools 2025</h1>
+            <p>Discover hand-picked AI tools for writing, images, coding, and productivity. Updated weekly with comprehensive reviews.</p>
+            
+            <input type="text" id="search" placeholder="Search tools... (e.g. writing, free)" aria-label="Search AI tools">
+            <div class="filters">
+                <button data-category="all" class="active">All Tools</button>
+                <button data-category="writing">Writing</button>
+                <button data-category="image">Image</button>
+                <button data-category="video">Video</button>
+                <button data-category="coding">Coding</button>
+                <button data-category="productivity">Productivity</button>
+            </div>
+        </div>
+    </header>
 
-  <!-- AdSense placement under hero section -->
-  <div class="ad-container">
-    <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-2974605831306319"
-      data-ad-slot="1234567890"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-  </div>
-
-  <main>
-    <!-- Added content section for better SEO -->
-    <section class="content-section">
-      <h2>Why Use AI Tools in 2025?</h2>
-      <p>Artificial Intelligence has revolutionized how we work, create, and solve problems. The right AI tools can significantly boost your productivity, enhance creativity, and automate repetitive tasks. Our curated list helps you navigate the rapidly evolving AI landscape with confidence.</p>
-      
-      <h3>How We Evaluate AI Tools</h3>
-      <p>Each tool in our directory undergoes rigorous testing. We evaluate based on:</p>
-      <ul>
-        <li>User interface and experience</li>
-        <li>Feature set and capabilities</li>
-        <li>Pricing and value for money</li>
-        <li>Performance and reliability</li>
-        <li>Customer support and documentation</li>
-      </ul>
-    </section>
-
-    <section class="tools-section">
-      <h2>Featured AI Tools</h2>
-      <table id="tools-table">
-        <thead>
-          <tr>
-            <th>Tool Name</th>
-            <th>Category</th>
-            <th>Rating</th>
-            <th>Pricing</th>
-            <th>Description</th>
-            <th>Visit</th>
-          </tr>
-        </thead>
-        <tbody id="tools-body">
-          <!-- Tools will be populated by JavaScript -->
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Additional content section -->
-    <section class="faq-section">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <h3>How often is this list updated?</h3>
-        <p>We update our AI tools directory weekly to ensure you have access to the latest and most effective tools available.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Do you test all tools personally?</h3>
-        <p>Yes, our team personally tests each tool to provide authentic reviews and recommendations.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Are there free options available?</h3>
-        <p>Many AI tools offer free tiers or trial periods. We clearly indicate pricing models for each tool in our directory.</p>
-      </div>
-      <div class="faq-item">
-        <h3>How do you make money?</h3>
-        <p>We may earn commissions through affiliate links, but this never affects our reviews or rankings. We maintain strict editorial independence.</p>
-      </div>
-    </section>
-
-    <!-- Additional AdSense placement -->
+    <!-- AdSense Ad -->
     <div class="ad-container">
-      <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-2974605831306319"
-        data-ad-slot="0987654321"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-2974605831306319"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
     </div>
 
-    <!-- About Section -->
-    <section id="about" class="content-section">
-      <h2>About AI Tool Hub</h2>
-      <p>AI Tool Hub was founded in 2023 with a mission to help individuals and businesses navigate the complex world of artificial intelligence tools. Our team of tech enthusiasts and AI experts spends hundreds of hours testing and evaluating tools so you don't have to.</p>
-      <p>We believe in transparency, accuracy, and providing genuine value to our readers. All our reviews are based on hands-on experience and real-world testing scenarios.</p>
-    </section>
+    <main>
+        <!-- Introduction Section -->
+        <section class="content-section">
+            <h2>Why Use AI Tools in 2025?</h2>
+            <p>Artificial Intelligence has transformed how we work, create, and solve problems. The right AI tools can significantly boost your productivity, enhance creativity, and automate repetitive tasks. Our curated list helps you navigate the rapidly evolving AI landscape with confidence.</p>
+            
+            <h3>How We Evaluate AI Tools</h3>
+            <p>Each tool in our directory undergoes rigorous testing. We evaluate based on:</p>
+            <ul>
+                <li>User interface and experience</li>
+                <li>Feature set and capabilities</li>
+                <li>Pricing and value for money</li>
+                <li>Performance and reliability</li>
+                <li>Customer support and documentation</li>
+            </ul>
+        </section>
 
-    <!-- Privacy Policy Section -->
-    <section id="privacy" class="content-section">
-      <h2>Privacy Policy</h2>
-      <p>Your privacy is important to us. This privacy policy explains what personal data we collect and how we use it.</p>
-      
-      <h3>Information We Collect</h3>
-      <p>We may collect non-personal identification information about users whenever they interact with our site. This may include browser name, type of computer, and technical information about users' means of connection to our site.</p>
-      
-      <h3>How We Use Collected Information</h3>
-      <p>We may use the information to improve our site, personalize user experience, and display relevant advertisements through Google AdSense.</p>
-      
-      <h3>Google AdSense</h3>
-      <p>We use Google AdSense to display ads on our site. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to our site and/or other sites on the Internet. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads">Google's Ads Settings</a>.</p>
-    </section>
+        <!-- Tools Table -->
+        <section class="content-section">
+            <h2>Featured AI Tools</h2>
+            <div class="tools-table-container">
+                <table id="tools-table">
+                    <thead>
+                        <tr>
+                            <th>Tool Name</th>
+                            <th>Category</th>
+                            <th>Rating</th>
+                            <th>Pricing</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tools-body">
+                        <!-- Tools will be loaded here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="content-section">
-      <h2>Contact Us</h2>
-      <p>Have questions, suggestions, or found an AI tool we should review? We'd love to hear from you!</p>
-      <p>Email: contact@aitoolhub.example.com</p>
-      <p>We typically respond within 24-48 hours.</p>
-    </section>
-  </main>
+        <!-- FAQ Section -->
+        <section class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>How often is this list updated?</h3>
+                <p>We update our AI tools directory weekly to ensure you have access to the latest and most effective tools available.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you test all tools personally?</h3>
+                <p>Yes, our team personally tests each tool to provide authentic reviews and recommendations.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Are there free options available?</h3>
+                <p>Many AI tools offer free tiers or trial periods. We clearly indicate pricing models for each tool in our directory.</p>
+            </div>
+        </section>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>AI Tool Hub</h3>
-        <p>Your trusted source for AI tool reviews and recommendations since 2023.</p>
-      </div>
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#privacy">Privacy Policy</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Categories</h4>
-        <ul>
-          <li><a href="#writing">Writing Tools</a></li>
-          <li><a href="#image">Image Tools</a></li>
-          <li><a href="#video">Video Tools</a></li>
-          <li><a href="#coding">Coding Tools</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 AI Tool Hub • <a href="#disclosure">Affiliate Disclosure</a> • All rights reserved</p>
-      <p class="disclaimer">Note: We may earn commissions through affiliate links. This helps support our work but never influences our reviews.</p>
-    </div>
-  </footer>
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <h2>About AI Tool Hub</h2>
+            <p>AI Tool Hub was founded in 2023 with a mission to help individuals and businesses navigate the complex world of artificial intelligence tools. Our team of tech enthusiasts and AI experts spends hundreds of hours testing and evaluating tools so you don't have to.</p>
+        </section>
 
-  <!-- AdSense script at bottom for better performance -->
-  <script>
-    // Initialize AdSense after page load
-    window.addEventListener('load', function() {
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    });
-  </script>
-  
-  <script>
-    // JavaScript will be inserted here
-  </script>
+        <!-- Privacy Policy Section -->
+        <section id="privacy" class="content-section">
+            <h2>Privacy Policy</h2>
+            <p>Your privacy is important to us. We may collect non-personal identification information to improve our site and display relevant advertisements through Google AdSense.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <h2>Contact Us</h2>
+            <p>Have questions or suggestions? We'd love to hear from you!</p>
+            <p>Email: contact@aitoolhub.example.com</p>
+        </section>
+
+        <!-- Second AdSense Ad -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-2974605831306319"
+                data-ad-slot="0987654321"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AI Tool Hub</h3>
+                <p>Your trusted source for AI tool reviews and recommendations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#writing">Writing Tools</a></li>
+                    <li><a href="#image">Image Tools</a></li>
+                    <li><a href="#video">Video Tools</a></li>
+                    <li><a href="#coding">Coding Tools</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AI Tool Hub • <a href="#disclosure">Affiliate Disclosure</a> • All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // AI Tools Data
+        const aiTools = [
+            {
+                name: "ChatGPT",
+                category: "writing",
+                rating: 4.8,
+                pricing: "freemium",
+                description: "Advanced AI chatbot for conversation, content creation, and problem-solving.",
+                url: "https://chat.openai.com"
+            },
+            {
+                name: "Claude 3.5",
+                category: "writing",
+                rating: 4.7,
+                pricing: "freemium",
+                description: "AI assistant with strong reasoning capabilities and honest conversations.",
+                url: "https://claude.ai"
+            },
+            {
+                name: "Gemini",
+                category: "writing",
+                rating: 4.6,
+                pricing: "free",
+                description: "Google's AI assistant integrated with search for comprehensive information.",
+                url: "https://gemini.google.com"
+            },
+            {
+                name: "Midjourney",
+                category: "image",
+                rating: 4.9,
+                pricing: "paid",
+                description: "AI image generator creating stunning visuals from text descriptions.",
+                url: "https://midjourney.com"
+            },
+            {
+                name: "Leonardo AI",
+                category: "image",
+                rating: 4.5,
+                pricing: "freemium",
+                description: "Powerful image generation with fine-tuned models and customization.",
+                url: "https://leonardo.ai"
+            },
+            {
+                name: "Runway ML",
+                category: "video",
+                rating: 4.6,
+                pricing: "freemium",
+                description: "Creative suite with AI tools for video editing and generation.",
+                url: "https://runwayml.com"
+            },
+            {
+                name: "GitHub Copilot",
+                category: "coding",
+                rating: 4.8,
+                pricing: "paid",
+                description: "AI pair programmer that suggests code and functions in real-time.",
+                url: "https://github.com/features/copilot"
+            },
+            {
+                name: "Notion AI",
+                category: "productivity",
+                rating: 4.5,
+                pricing: "paid",
+                description: "AI writing assistant integrated into Notion for content creation.",
+                url: "https://notion.so"
+            },
+            {
+                name: "Grammarly",
+                category: "writing",
+                rating: 4.6,
+                pricing: "freemium",
+                description: "AI-powered writing assistant for grammar checking and clarity.",
+                url: "https://grammarly.com"
+            },
+            {
+                name: "Jasper",
+                category: "writing",
+                rating: 4.4,
+                pricing: "paid",
+                description: "AI content creation platform for marketers and businesses.",
+                url: "https://jasper.ai"
+            }
+        ];
+
+        // DOM Elements
+        const toolsBody = document.getElementById('tools-body');
+        const searchInput = document.getElementById('search');
+        const filterButtons = document.querySelectorAll('.filters button');
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTools(aiTools);
+            setupEventListeners();
+            initializeAdSense();
+        });
+
+        // Set up event listeners
+        function setupEventListeners() {
+            // Search functionality
+            searchInput.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+                filterTools(searchTerm);
+            });
+
+            // Filter buttons
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter tools
+                    const category = this.dataset.category;
+                    filterTools(searchInput.value.toLowerCase(), category);
+                });
+            });
+        }
+
+        // Filter tools based on search and category
+        function filterTools(searchTerm = '', category = 'all') {
+            let filteredTools = aiTools;
+            
+            // Filter by category
+            if (category !== 'all') {
+                filteredTools = filteredTools.filter(tool => tool.category === category);
+            }
+            
+            // Filter by search term
+            if (searchTerm) {
+                filteredTools = filteredTools.filter(tool => 
+                    tool.name.toLowerCase().includes(searchTerm) ||
+                    tool.description.toLowerCase().includes(searchTerm) ||
+                    tool.category.toLowerCase().includes(searchTerm)
+                );
+            }
+            
+            renderTools(filteredTools);
+        }
+
+        // Render tools to the table
+        function renderTools(tools) {
+            toolsBody.innerHTML = '';
+            
+            if (tools.length === 0) {
+                toolsBody.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="text-align: center; padding: 2rem;">
+                            No tools found matching your criteria. Try adjusting your search or filters.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            tools.forEach(tool => {
+                const row = document.createElement('tr');
+                
+                // Format rating with stars
+                const stars = '★'.repeat(Math.floor(tool.rating)) + 
+                             (tool.rating % 1 >= 0.5 ? '½' : '') +
+                             '☆'.repeat(5 - Math.ceil(tool.rating));
+                
+                row.innerHTML = `
+                    <td class="tool-name">${tool.name}</td>
+                    <td>
+                        <span class="category-badge ${tool.category}">
+                            ${tool.category}
+                        </span>
+                    </td>
+                    <td class="rating" title="${tool.rating}/5">${stars}</td>
+                    <td class="pricing ${tool.pricing}">
+                        ${tool.pricing.charAt(0).toUpperCase() + tool.pricing.slice(1)}
+                    </td>
+                    <td>${tool.description}</td>
+                    <td>
+                        <a href="${tool.url}" target="_blank" rel="noopener" class="visit-btn">
+                            Visit
+                        </a>
+                    </td>
+                `;
+                
+                toolsBody.appendChild(row);
+            });
+        }
+
+        // Initialize AdSense
+        function initializeAdSense() {
+            if (window.adsbygoogle) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
