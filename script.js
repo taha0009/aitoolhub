@@ -1,83 +1,53 @@
-let currentPage = 1;
-const itemsPerPage = 10;
-let currentData = [...tools];
+const tools = [
+    {name:"ChatGPT",cat:"writing",rate:"4.9",price:"Free / $20/mo",desc:"Best all-round AI chatbot",url:"https://chatgpt.com"},
+    {name:"Claude 3.5",cat:"writing",rate:"4.9",price:"Free / $20/mo",desc:"Strongest reasoning AI",url:"https://claude.ai"},
+    {name:"Gemini",cat:"writing",rate:"4.7",price:"Free",desc:"Google's fastest AI",url:"https://gemini.google.com"},
+    {name:"Midjourney",cat:"image",rate:"4.8",price:"$10/mo",desc:"Best AI art generator",url:"https://midjourney.com"},
+    {name:"Leonardo AI",cat:"image",rate:"4.7",price:"Free / $10/mo",desc:"Great for realistic images",url:"https://leonardo.ai"},
+    {name:"Flux",cat:"image",rate:"4.9",price:"Free",desc:"New open-source king",url:"https://blackforestlabs.ai"},
+    {name:"Runway Gen-3",cat:"video",rate:"4.8",price:"$12/mo",desc:"Best text-to-video",url:"https://runwayml.com"},
+    {name:"Pika Labs",cat:"video",rate:"4.6",price:"Free / $8/mo",desc:"Fast & fun video AI",url:"https://pika.art"},
+    {name:"GitHub Copilot",cat:"coding",rate:"4.9",price:"$10/mo",desc:"#1 AI coding assistant",url:"https://github.com/features/copilot"},
+    {name:"Cursor",cat:"coding",rate:"4.8",price:"Free / $20/mo",desc:"Full AI code editor",url:"https://cursor.sh"},
+    {name:"Replit Agent",cat:"coding",rate:"4.6",price:"Free tier",desc:"Build apps with AI",url:"https://replit.com"},
+    {name:"Perplexity",cat:"writing",rate:"4.8",price:"Free / $20/mo",desc:"AI search engine",url:"https://perplexity.ai"}
+];
 
-// Render Table with Pagination
+const tbody = document.querySelector("#tools-table tbody");
+const search = document.getElementById("search");
+
 function render(data) {
     tbody.innerHTML = "";
-    const start = (currentPage - 1) * itemsPerPage;
-    const paginated = data.slice(start, start + itemsPerPage);
-
-    tbody.innerHTML = paginated.map(t => `
-        <tr>
-        <td>${highlight(t.name)}</td>
-        <td>${highlight(t.cat)}</td>
-        <td>⭐ ${t.rate}</td>
-        <td>${t.price}</td>
-        <td>${highlight(t.desc)}</td>
-        <td><a href="${t.url}" target="_blank" class="action">Visit →</a></td>
-        </tr>
-    `).join("");
-
-    document.getElementById("pageInfo").textContent =
-        `Page ${currentPage} / ${Math.ceil(data.length / itemsPerPage)}`;
+    data.forEach(t => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${t.name}</td>
+            <td>${t.cat}</td>
+            <td>⭐ ${t.rate}</td>
+            <td>${t.price}</td>
+            <td>${t.desc}</td>
+            <td><a href="${t.url}" target="_blank" class="action">Visit →</a></td>
+        `;
+        tbody.appendChild(row);
+    });
 }
 
-// Highlight search term
-function highlight(text) {
-    if (!search.value) return text;
-    return text.replace(new RegExp(search.value, "gi"), match => `<mark>${match}</mark>`);
-}
-
-// Filters
-filterButtons.forEach(btn =>
+document.querySelectorAll(".filters button").forEach(btn => {
     btn.addEventListener("click", () => {
-        filterButtons.forEach(b => b.classList.remove("active"));
+        document.querySelector(".filters .active").classList.remove("active");
         btn.classList.add("active");
-        currentPage = 1;
         const cat = btn.dataset.category;
-        currentData = (cat === "all") ? tools : tools.filter(t => t.cat === cat);
-        render(currentData);
-    })
-);
-
-// Search
-search.addEventListener("input", () => {
-    currentPage = 1;
-    currentData = tools.filter(t =>
-        t.name.toLowerCase().includes(search.value.toLowerCase()) ||
-        t.desc.toLowerCase().includes(search.value.toLowerCase()) ||
-        t.cat.toLowerCase().includes(search.value.toLowerCase())
-    );
-    render(currentData);
+        render(cat === "all" ? tools : tools.filter(t => t.cat === cat));
+    });
 });
 
-// Sort
-document.getElementById("sort").addEventListener("change", e => {
-    const val = e.target.value;
-    if (val === "alpha") currentData.sort((a,b) => a.name.localeCompare(b.name));
-    if (val === "rating") currentData.sort((a,b) => b.rate - a.rate);
-    if (val === "price") currentData.sort((a,b) => 
-       parseFloat(a.price) - parseFloat(b.price)
-    );
-    render(currentData);
+search.addEventListener("input", e => {
+    const term = e.target.value.toLowerCase();
+    render(tools.filter(t => 
+        t.name.toLowerCase().includes(term) || 
+        t.desc.toLowerCase().includes(term) || 
+        t.cat.includes(term)
+    ));
 });
 
-// Pagination
-document.getElementById("prevPage").addEventListener("click", () => {
-    if (currentPage > 1) currentPage--;
-    render(currentData);
-});
-
-document.getElementById("nextPage").addEventListener("click", () => {
-    if (currentPage < Math.ceil(currentData.length/itemsPerPage)) currentPage++;
-    render(currentData);
-});
-
-// Dark Mode Toggle
-document.getElementById("darkToggle").addEventListener("click", () =>
-    document.body.classList.toggle("dark")
-);
-
-// First Load
-render(tools);
+render(tools); // First load
