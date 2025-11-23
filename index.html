@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best AI Tools 2025 - Top AI Tools Directory</title>
-    <meta name="description" content="Discover the best AI tools for writing, images, video, coding, and productivity. Updated weekly with ratings and reviews.">
+    <title>AI Tool Hub - Discover The Best AI Tools in 2025</title>
+    <meta name="description" content="Comprehensive directory of the best AI tools for writing, image generation, video creation, coding, and productivity. Updated daily.">
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2974605831306319" crossorigin="anonymous"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         /* Reset and Base Styles */
@@ -17,18 +20,35 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
+            --accent: #f59e0b;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-light: #f8fafc;
+            --bg-dark: #1e293b;
+            --border: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: var(--text);
+            background-color: var(--bg-light);
         }
 
         /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
+            background: var(--bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .nav-container {
@@ -38,13 +58,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 70px;
         }
 
         .logo {
             font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
+            font-weight: 700;
+            color: var(--primary);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: var(--secondary);
         }
 
         .nav-menu {
@@ -54,216 +82,463 @@
         }
 
         .nav-menu a {
-            color: white;
             text-decoration: none;
+            color: var(--text);
             font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text);
+            cursor: pointer;
         }
 
         /* Hero Section */
         .hero {
-            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 20px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="1000,100 1000,0 0,100"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
         }
 
         #search {
             width: 100%;
-            max-width: 500px;
-            padding: 12px 20px;
+            padding: 16px 50px 16px 20px;
             border: none;
-            border-radius: 25px;
+            border-radius: 50px;
             font-size: 1rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .filters {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .filters button {
-            padding: 8px 16px;
-            border: 2px solid rgba(255,255,255,0.3);
-            background: transparent;
-            color: white;
-            border-radius: 20px;
-            cursor: pointer;
+            box-shadow: var(--shadow-lg);
             transition: all 0.3s;
         }
 
-        .filters button:hover,
-        .filters button.active {
-            background: white;
-            color: #667eea;
+        #search:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+
+        /* Categories */
+        .categories {
+            max-width: 1200px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .category-card {
+            background: var(--bg);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 10px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .category-card h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
         }
 
         /* Main Content */
         main {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 20px;
+            padding: 40px 20px;
         }
 
-        .content-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
+        .section-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
             margin-bottom: 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .content-section h2 {
-            color: #2d3748;
-            margin-bottom: 1rem;
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text);
         }
 
-        .content-section h3 {
-            color: #4a5568;
-            margin: 1.5rem 0 1rem;
-        }
-
-        .content-section ul {
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .content-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Tools Table */
-        .tools-table-container {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            overflow-x: auto;
-        }
-
-        #tools-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        #tools-table th {
-            background: #f7fafc;
-            padding: 1rem;
-            text-align: left;
-            font-weight: 600;
-            color: #4a5568;
-            border-bottom: 2px solid #e2e8f0;
-        }
-
-        #tools-table td {
-            padding: 1rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        #tools-table tr:hover {
-            background: #f7fafc;
-        }
-
-        .tool-name {
-            font-weight: 600;
-            color: #2d3748;
-        }
-
-        .category-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
+        .view-all {
+            color: var(--primary);
+            text-decoration: none;
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        .writing { background: #bee3f8; color: #2c5282; }
-        .image { background: #fed7d7; color: #c53030; }
-        .video { background: #feebc8; color: #d69e2e; }
-        .coding { background: #c6f6d5; color: #276749; }
-        .productivity { background: #e9d8fd; color: #6b46c1; }
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .tool-card {
+            background: var(--bg);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: between;
+            margin-bottom: 15px;
+        }
+
+        .tool-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-right: 15px;
+        }
+
+        .tool-info {
+            flex: 1;
+        }
+
+        .tool-info h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .tool-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
 
         .rating {
-            color: #f59e0b;
-            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--accent);
         }
 
         .pricing {
             font-weight: 500;
         }
 
-        .free { color: #38a169; }
-        .freemium { color: #d69e2e; }
-        .paid { color: #e53e3e; }
+        .free { color: #10b981; }
+        .freemium { color: #f59e0b; }
+        .paid { color: #ef4444; }
+
+        .tool-description {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .tool-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: var(--bg-light);
+            color: var(--text-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .tool-actions {
+            display: flex;
+            gap: 10px;
+        }
 
         .visit-btn {
-            padding: 6px 16px;
-            background: #4299e1;
+            flex: 1;
+            background: var(--primary);
             color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
             font-weight: 500;
+            cursor: pointer;
             transition: background 0.3s;
+            text-align: center;
+            text-decoration: none;
         }
 
         .visit-btn:hover {
-            background: #3182ce;
+            background: var(--primary-dark);
+        }
+
+        .favorite-btn {
+            background: var(--bg-light);
+            color: var(--text-light);
+            border: 1px solid var(--border);
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .favorite-btn:hover {
+            color: #ef4444;
+            border-color: #ef4444;
+        }
+
+        /* Featured Section */
+        .featured-tools {
+            margin-bottom: 60px;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .featured-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .featured-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .featured-card p {
+            opacity: 0.9;
+            margin-bottom: 20px;
         }
 
         /* Ad Container */
         .ad-container {
-            margin: 2rem auto;
+            background: var(--bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 40px 0;
             text-align: center;
-            padding: 0 20px;
+            border: 1px solid var(--border);
         }
 
-        /* FAQ Section */
-        .faq-item {
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .newsletter h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            opacity: 0.9;
             margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e2e8f0;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .faq-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
+        .newsletter-form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .newsletter-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .newsletter-btn:hover {
+            background: #e69500;
         }
 
         /* Footer */
         footer {
-            background: #2d3748;
+            background: var(--bg-dark);
             color: white;
-            margin-top: 4rem;
+            padding: 60px 0 0;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 20px;
+            padding: 0 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 40px;
         }
 
         .footer-section h3 {
-            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
             color: white;
         }
 
@@ -272,172 +547,262 @@
         }
 
         .footer-section li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .footer-section a {
-            color: #cbd5e0;
+            color: #cbd5e1;
             text-decoration: none;
+            transition: color 0.3s;
         }
 
         .footer-section a:hover {
             color: white;
         }
 
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
         .footer-bottom {
-            border-top: 1px solid #4a5568;
-            padding: 1.5rem 20px;
+            border-top: 1px solid #374151;
+            margin-top: 60px;
+            padding: 25px 20px;
             text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            color: #9ca3af;
+        }
+
+        .footer-bottom a {
+            color: #cbd5e1;
+            text-decoration: none;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
+            .nav-menu {
+                display: none;
             }
 
-            .nav-menu {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .categories {
+                margin-top: -20px;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
                 gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                padding: 60px 20px;
             }
 
             .hero h1 {
                 font-size: 2rem;
             }
-
-            .hero {
-                padding: 2rem 1rem;
-            }
-
-            #tools-table {
-                font-size: 0.9rem;
-            }
-
-            #tools-table th,
-            #tools-table td {
-                padding: 0.75rem 0.5rem;
-            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <nav class="main-nav">
-            <div class="nav-container">
-                <a href="/" class="logo">AI Tool Hub</a>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#privacy">Privacy</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+        <nav class="nav-container">
+            <a href="/" class="logo">
+                <i class="fas fa-robot"></i>
+                AI Tool Hub
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#new">New Tools</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
-
-        <div class="hero">
-            <h1>Best AI Tools 2025</h1>
-            <p>Discover hand-picked AI tools for writing, images, coding, and productivity. Updated weekly with comprehensive reviews.</p>
-            
-            <input type="text" id="search" placeholder="Search tools... (e.g. writing, free)" aria-label="Search AI tools">
-            <div class="filters">
-                <button data-category="all" class="active">All Tools</button>
-                <button data-category="writing">Writing</button>
-                <button data-category="image">Image</button>
-                <button data-category="video">Video</button>
-                <button data-category="coding">Coding</button>
-                <button data-category="productivity">Productivity</button>
-            </div>
-        </div>
     </header>
 
-    <!-- AdSense Ad -->
-    <div class="ad-container">
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-2974605831306319"
-            data-ad-slot="1234567890"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover The Best AI Tools in 2025</h1>
+            <p>Curated collection of 500+ AI tools for writing, design, coding, marketing, and productivity. Updated daily.</p>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search AI tools (e.g. 'image generator', 'free writing tool')">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+        <div class="categories-grid">
+            <a href="#" class="category-card" data-category="writing">
+                <div class="category-icon">
+                    <i class="fas fa-pen-fancy"></i>
+                </div>
+                <h3>Writing</h3>
+            </a>
+            <a href="#" class="category-card" data-category="image">
+                <div class="category-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3>Image</h3>
+            </a>
+            <a href="#" class="category-card" data-category="video">
+                <div class="category-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Video</h3>
+            </a>
+            <a href="#" class="category-card" data-category="audio">
+                <div class="category-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h3>Audio</h3>
+            </a>
+            <a href="#" class="category-card" data-category="coding">
+                <div class="category-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Coding</h3>
+            </a>
+            <a href="#" class="category-card" data-category="productivity">
+                <div class="category-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <h3>Productivity</h3>
+            </a>
+        </div>
+    </section>
 
     <main>
-        <!-- Introduction Section -->
-        <section class="content-section">
-            <h2>Why Use AI Tools in 2025?</h2>
-            <p>Artificial Intelligence has transformed how we work, create, and solve problems. The right AI tools can significantly boost your productivity, enhance creativity, and automate repetitive tasks. Our curated list helps you navigate the rapidly evolving AI landscape with confidence.</p>
-            
-            <h3>How We Evaluate AI Tools</h3>
-            <p>Each tool in our directory undergoes rigorous testing. We evaluate based on:</p>
-            <ul>
-                <li>User interface and experience</li>
-                <li>Feature set and capabilities</li>
-                <li>Pricing and value for money</li>
-                <li>Performance and reliability</li>
-                <li>Customer support and documentation</li>
-            </ul>
-        </section>
+        <!-- Ad Container -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-2974605831306319"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+        </div>
 
-        <!-- Tools Table -->
-        <section class="content-section">
-            <h2>Featured AI Tools</h2>
-            <div class="tools-table-container">
-                <table id="tools-table">
-                    <thead>
-                        <tr>
-                            <th>Tool Name</th>
-                            <th>Category</th>
-                            <th>Rating</th>
-                            <th>Pricing</th>
-                            <th>Description</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tools-body">
-                        <!-- Tools will be loaded here by JavaScript -->
-                    </tbody>
-                </table>
+        <!-- Popular Tools -->
+        <section class="popular-tools">
+            <div class="section-header">
+                <h2>Most Popular AI Tools</h2>
+                <a href="#" class="view-all">
+                    View All
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="tools-grid" id="popular-tools">
+                <!-- Tools will be populated by JavaScript -->
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="content-section">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>How often is this list updated?</h3>
-                <p>We update our AI tools directory weekly to ensure you have access to the latest and most effective tools available.</p>
+        <!-- Featured Tools -->
+        <section class="featured-tools" id="featured">
+            <div class="section-header">
+                <h2>Featured AI Tools</h2>
+                <a href="#" class="view-all">
+                    View All
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-            <div class="faq-item">
-                <h3>Do you test all tools personally?</h3>
-                <p>Yes, our team personally tests each tool to provide authentic reviews and recommendations.</p>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-badge">Editor's Choice</div>
+                    <h3>ChatGPT 4.5</h3>
+                    <p>The most advanced AI assistant with multimodal capabilities and enhanced reasoning.</p>
+                    <a href="#" class="visit-btn">Try Now</a>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-badge">Trending</div>
+                    <h3>Midjourney v6</h3>
+                    <p>Revolutionary image generation with photorealistic results and improved prompt understanding.</p>
+                    <a href="#" class="visit-btn">Explore</a>
+                </div>
             </div>
-            <div class="faq-item">
-                <h3>Are there free options available?</h3>
-                <p>Many AI tools offer free tiers or trial periods. We clearly indicate pricing models for each tool in our directory.</p>
+        </section>
+
+        <!-- New Tools -->
+        <section class="new-tools" id="new">
+            <div class="section-header">
+                <h2>Recently Added Tools</h2>
+                <a href="#" class="view-all">
+                    View All
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="tools-grid" id="new-tools">
+                <!-- Tools will be populated by JavaScript -->
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="content-section">
-            <h2>About AI Tool Hub</h2>
-            <p>AI Tool Hub was founded in 2023 with a mission to help individuals and businesses navigate the complex world of artificial intelligence tools. Our team of tech enthusiasts and AI experts spends hundreds of hours testing and evaluating tools so you don't have to.</p>
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <h2>Stay Updated with AI Trends</h2>
+            <p>Get weekly updates on new AI tools, features, and industry insights delivered to your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
         </section>
 
-        <!-- Privacy Policy Section -->
-        <section id="privacy" class="content-section">
-            <h2>Privacy Policy</h2>
-            <p>Your privacy is important to us. We may collect non-personal identification information to improve our site and display relevant advertisements through Google AdSense.</p>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="content-section">
-            <h2>Contact Us</h2>
-            <p>Have questions or suggestions? We'd love to hear from you!</p>
-            <p>Email: contact@aitoolhub.example.com</p>
-        </section>
-
-        <!-- Second AdSense Ad -->
+        <!-- Second Ad Container -->
         <div class="ad-container">
             <ins class="adsbygoogle"
                 style="display:block"
@@ -448,33 +813,51 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>AI Tool Hub</h3>
-                <p>Your trusted source for AI tool reviews and recommendations.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#privacy">Privacy Policy</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <p>Your trusted source for discovering and evaluating the best AI tools available.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Categories</h3>
                 <ul>
-                    <li><a href="#writing">Writing Tools</a></li>
-                    <li><a href="#image">Image Tools</a></li>
-                    <li><a href="#video">Video Tools</a></li>
-                    <li><a href="#coding">Coding Tools</a></li>
+                    <li><a href="#">Writing Tools</a></li>
+                    <li><a href="#">Image Generators</a></li>
+                    <li><a href="#">Video Creators</a></li>
+                    <li><a href="#">Audio Tools</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">How We Test</a></li>
+                    <li><a href="#">Submit Tool</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Affiliate Disclosure</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 AI Tool Hub • <a href="#disclosure">Affiliate Disclosure</a> • All rights reserved</p>
+            <p>&copy; 2025 AI Tool Hub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
         </div>
     </footer>
 
@@ -487,93 +870,204 @@
                 rating: 4.8,
                 pricing: "freemium",
                 description: "Advanced AI chatbot for conversation, content creation, and problem-solving.",
-                url: "https://chat.openai.com"
-            },
-            {
-                name: "Claude 3.5",
-                category: "writing",
-                rating: 4.7,
-                pricing: "freemium",
-                description: "AI assistant with strong reasoning capabilities and honest conversations.",
-                url: "https://claude.ai"
-            },
-            {
-                name: "Gemini",
-                category: "writing",
-                rating: 4.6,
-                pricing: "free",
-                description: "Google's AI assistant integrated with search for comprehensive information.",
-                url: "https://gemini.google.com"
+                tags: ["chat", "writing", "research"],
+                url: "https://chat.openai.com",
+                icon: "fas fa-comment",
+                featured: true
             },
             {
                 name: "Midjourney",
                 category: "image",
                 rating: 4.9,
                 pricing: "paid",
-                description: "AI image generator creating stunning visuals from text descriptions.",
-                url: "https://midjourney.com"
+                description: "AI image generator creating stunning, artistic visuals from text descriptions.",
+                tags: ["images", "art", "design"],
+                url: "https://midjourney.com",
+                icon: "fas fa-palette",
+                featured: true
             },
             {
-                name: "Leonardo AI",
-                category: "image",
-                rating: 4.5,
+                name: "Claude 3.5",
+                category: "writing",
+                rating: 4.7,
                 pricing: "freemium",
-                description: "Powerful image generation with fine-tuned models and customization.",
-                url: "https://leonardo.ai"
+                description: "AI assistant focused on helpful, harmless conversations with strong reasoning.",
+                tags: ["chat", "analysis", "writing"],
+                url: "https://claude.ai",
+                icon: "fas fa-brain",
+                featured: false
             },
             {
                 name: "Runway ML",
                 category: "video",
                 rating: 4.6,
                 pricing: "freemium",
-                description: "Creative suite with AI tools for video editing and generation.",
-                url: "https://runwayml.com"
+                description: "Creative suite with AI tools for video editing, generation, and visual effects.",
+                tags: ["video", "editing", "vfx"],
+                url: "https://runwayml.com",
+                icon: "fas fa-film",
+                featured: false
             },
             {
                 name: "GitHub Copilot",
                 category: "coding",
                 rating: 4.8,
                 pricing: "paid",
-                description: "AI pair programmer that suggests code and functions in real-time.",
-                url: "https://github.com/features/copilot"
-            },
-            {
-                name: "Notion AI",
-                category: "productivity",
-                rating: 4.5,
-                pricing: "paid",
-                description: "AI writing assistant integrated into Notion for content creation.",
-                url: "https://notion.so"
+                description: "AI pair programmer that suggests code and entire functions in real-time.",
+                tags: ["coding", "development", "programming"],
+                url: "https://github.com/features/copilot",
+                icon: "fas fa-code",
+                featured: true
             },
             {
                 name: "Grammarly",
                 category: "writing",
                 rating: 4.6,
                 pricing: "freemium",
-                description: "AI-powered writing assistant for grammar checking and clarity.",
-                url: "https://grammarly.com"
+                description: "AI-powered writing assistant for grammar checking and clarity improvements.",
+                tags: ["writing", "grammar", "editing"],
+                url: "https://grammarly.com",
+                icon: "fas fa-spell-check",
+                featured: false
+            },
+            {
+                name: "DALL-E 3",
+                category: "image",
+                rating: 4.7,
+                pricing: "paid",
+                description: "OpenAI's advanced image generation with improved understanding of detail.",
+                tags: ["images", "art", "creation"],
+                url: "https://openai.com/dall-e-3",
+                icon: "fas fa-paint-brush",
+                featured: false
+            },
+            {
+                name: "Notion AI",
+                category: "productivity",
+                rating: 4.5,
+                pricing: "paid",
+                description: "AI writing assistant integrated into Notion for content creation and organization.",
+                tags: ["productivity", "writing", "organization"],
+                url: "https://notion.so",
+                icon: "fas fa-sticky-note",
+                featured: false
+            },
+            {
+                name: "Leonardo AI",
+                category: "image",
+                rating: 4.5,
+                pricing: "freemium",
+                description: "Powerful image generation platform with fine-tuned models and customization.",
+                tags: ["images", "art", "design"],
+                url: "https://leonardo.ai",
+                icon: "fas fa-vector-square",
+                featured: false
             },
             {
                 name: "Jasper",
                 category: "writing",
                 rating: 4.4,
                 pricing: "paid",
-                description: "AI content creation platform for marketers and businesses.",
-                url: "https://jasper.ai"
+                description: "AI content creation platform for marketers with brand voice customization.",
+                tags: ["marketing", "writing", "content"],
+                url: "https://jasper.ai",
+                icon: "fas fa-feather",
+                featured: false
+            },
+            {
+                name: "Descript",
+                category: "video",
+                rating: 4.5,
+                pricing: "freemium",
+                description: "All-in-one video and podcast editing with AI-powered transcription.",
+                tags: ["video", "audio", "editing"],
+                url: "https://descript.com",
+                icon: "fas fa-podcast",
+                featured: false
+            },
+            {
+                name: "Fireflies.ai",
+                category: "productivity",
+                rating: 4.4,
+                pricing: "freemium",
+                description: "AI notetaker for meetings that transcribes, summarizes, and analyzes conversations.",
+                tags: ["meetings", "productivity", "notes"],
+                url: "https://fireflies.ai",
+                icon: "fas fa-microphone",
+                featured: false
             }
         ];
 
         // DOM Elements
-        const toolsBody = document.getElementById('tools-body');
+        const popularToolsGrid = document.getElementById('popular-tools');
+        const newToolsGrid = document.getElementById('new-tools');
         const searchInput = document.getElementById('search');
-        const filterButtons = document.querySelectorAll('.filters button');
+        const categoryCards = document.querySelectorAll('.category-card');
 
         // Initialize the page
         document.addEventListener('DOMContentLoaded', function() {
-            renderTools(aiTools);
+            renderPopularTools();
+            renderNewTools();
             setupEventListeners();
             initializeAdSense();
         });
+
+        // Render popular tools (top rated)
+        function renderPopularTools() {
+            const popularTools = aiTools
+                .sort((a, b) => b.rating - a.rating)
+                .slice(0, 6);
+            
+            renderTools(popularTools, popularToolsGrid);
+        }
+
+        // Render new tools (last 6 added)
+        function renderNewTools() {
+            const newTools = aiTools.slice(-6);
+            renderTools(newTools, newToolsGrid);
+        }
+
+        // Render tools to a grid
+        function renderTools(tools, container) {
+            container.innerHTML = '';
+            
+            tools.forEach(tool => {
+                const toolCard = document.createElement('div');
+                toolCard.className = 'tool-card';
+                
+                // Format rating with stars
+                const stars = '★'.repeat(Math.floor(tool.rating)) + 
+                             (tool.rating % 1 >= 0.5 ? '½' : '') +
+                             '☆'.repeat(5 - Math.ceil(tool.rating));
+                
+                toolCard.innerHTML = `
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="${tool.icon}"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h3>${tool.name}</h3>
+                            <div class="tool-meta">
+                                <span class="rating">${stars} ${tool.rating}</span>
+                                <span class="pricing ${tool.pricing}">${tool.pricing.charAt(0).toUpperCase() + tool.pricing.slice(1)}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="tool-description">${tool.description}</p>
+                    <div class="tool-tags">
+                        ${tool.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="tool-actions">
+                        <a href="${tool.url}" target="_blank" class="visit-btn">Visit Tool</a>
+                        <button class="favorite-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                `;
+                
+                container.appendChild(toolCard);
+            });
+        }
 
         // Set up event listeners
         function setupEventListeners() {
@@ -583,84 +1077,72 @@
                 filterTools(searchTerm);
             });
 
-            // Filter buttons
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Filter tools
+            // Category filter
+            categoryCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
                     const category = this.dataset.category;
-                    filterTools(searchInput.value.toLowerCase(), category);
+                    filterByCategory(category);
                 });
+            });
+
+            // Mobile menu
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            // Favorite buttons
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.favorite-btn')) {
+                    const btn = e.target.closest('.favorite-btn');
+                    const icon = btn.querySelector('i');
+                    icon.classList.toggle('far');
+                    icon.classList.toggle('fas');
+                    icon.classList.toggle('fa-heart');
+                }
+            });
+
+            // Newsletter form
+            const newsletterForm = document.querySelector('.newsletter-form');
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('.newsletter-input').value;
+                alert(`Thank you for subscribing with ${email}! You'll receive our next update.`);
+                this.reset();
             });
         }
 
-        // Filter tools based on search and category
-        function filterTools(searchTerm = '', category = 'all') {
-            let filteredTools = aiTools;
-            
-            // Filter by category
-            if (category !== 'all') {
-                filteredTools = filteredTools.filter(tool => tool.category === category);
-            }
-            
-            // Filter by search term
-            if (searchTerm) {
-                filteredTools = filteredTools.filter(tool => 
-                    tool.name.toLowerCase().includes(searchTerm) ||
-                    tool.description.toLowerCase().includes(searchTerm) ||
-                    tool.category.toLowerCase().includes(searchTerm)
-                );
-            }
-            
-            renderTools(filteredTools);
-        }
-
-        // Render tools to the table
-        function renderTools(tools) {
-            toolsBody.innerHTML = '';
-            
-            if (tools.length === 0) {
-                toolsBody.innerHTML = `
-                    <tr>
-                        <td colspan="6" style="text-align: center; padding: 2rem;">
-                            No tools found matching your criteria. Try adjusting your search or filters.
-                        </td>
-                    </tr>
-                `;
+        // Filter tools by search term
+        function filterTools(searchTerm) {
+            if (searchTerm.length < 2) {
+                renderPopularTools();
+                renderNewTools();
                 return;
             }
             
-            tools.forEach(tool => {
-                const row = document.createElement('tr');
-                
-                // Format rating with stars
-                const stars = '★'.repeat(Math.floor(tool.rating)) + 
-                             (tool.rating % 1 >= 0.5 ? '½' : '') +
-                             '☆'.repeat(5 - Math.ceil(tool.rating));
-                
-                row.innerHTML = `
-                    <td class="tool-name">${tool.name}</td>
-                    <td>
-                        <span class="category-badge ${tool.category}">
-                            ${tool.category}
-                        </span>
-                    </td>
-                    <td class="rating" title="${tool.rating}/5">${stars}</td>
-                    <td class="pricing ${tool.pricing}">
-                        ${tool.pricing.charAt(0).toUpperCase() + tool.pricing.slice(1)}
-                    </td>
-                    <td>${tool.description}</td>
-                    <td>
-                        <a href="${tool.url}" target="_blank" rel="noopener" class="visit-btn">
-                            Visit
-                        </a>
-                    </td>
-                `;
-                
-                toolsBody.appendChild(row);
+            const filteredTools = aiTools.filter(tool => 
+                tool.name.toLowerCase().includes(searchTerm) ||
+                tool.description.toLowerCase().includes(searchTerm) ||
+                tool.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
+                tool.category.toLowerCase().includes(searchTerm)
+            );
+            
+            renderTools(filteredTools.slice(0, 6), popularToolsGrid);
+            renderTools(filteredTools.slice(6, 12), newToolsGrid);
+        }
+
+        // Filter by category
+        function filterByCategory(category) {
+            const filteredTools = aiTools.filter(tool => tool.category === category);
+            renderTools(filteredTools.slice(0, 6), popularToolsGrid);
+            renderTools(filteredTools.slice(6, 12), newToolsGrid);
+            
+            // Update UI to show active category
+            categoryCards.forEach(card => {
+                card.style.borderColor = card.dataset.category === category ? 'var(--primary)' : 'var(--border)';
             });
         }
 
