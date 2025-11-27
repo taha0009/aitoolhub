@@ -1,1 +1,296 @@
+[
+  {
+    "id": 1,
+    "name": "ChatGPT",
+    "category": "chat",
+    "description": "Advanced conversational AI for writing, brainstorming, research, and coding help.",
+    "tags": ["Chat", "Writing", "Assistant"],
+    "rating": 4.9,
+    "pricing": "Free + Paid",
+    "link": "https://chat.openai.com",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Claude",
+    "category": "chat",
+    "description": "Helpful AI assistant focused on long-context reasoning, writing, and analysis.",
+    "tags": ["Chat", "Analysis", "Writing"],
+    "rating": 4.8,
+    "pricing": "Free + Paid",
+    "link": "https://claude.ai",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "name": "Gemini",
+    "category": "chat",
+    "description": "Google’s multimodal AI for chat, code, and image understanding.",
+    "tags": ["Chat", "Code", "Multimodal"],
+    "rating": 4.6,
+    "pricing": "Free + Paid",
+    "link": "https://gemini.google.com"
+  },
+  {
+    "id": 4,
+    "name": "Jasper",
+    "category": "chat",
+    "description": "AI copywriting assistant built for teams and marketing workflows.",
+    "tags": ["Marketing", "Copywriting"],
+    "rating": 4.5,
+    "pricing": "Paid",
+    "link": "https://www.jasper.ai"
+  },
+  {
+    "id": 5,
+    "name": "Copy.ai",
+    "category": "chat",
+    "description": "Generate marketing copy, product descriptions, and social posts in seconds.",
+    "tags": ["Marketing", "Social Media"],
+    "rating": 4.4,
+    "pricing": "Free + Paid",
+    "link": "https://www.copy.ai"
+  },
 
+  /* IMAGE TOOLS */
+  {
+    "id": 6,
+    "name": "Midjourney",
+    "category": "image",
+    "description": "AI image generation for high-quality artwork, illustration, and concept design.",
+    "tags": ["Image", "Art"],
+    "rating": 4.7,
+    "pricing": "Paid",
+    "link": "https://www.midjourney.com",
+    "featured": true
+  },
+  {
+    "id": 7,
+    "name": "DALL·E",
+    "category": "image",
+    "description": "Generate images from text prompts, built into ChatGPT and OpenAI’s platform.",
+    "tags": ["Image", "Design"],
+    "rating": 4.6,
+    "pricing": "Paid",
+    "link": "https://openai.com/dall-e"
+  },
+  {
+    "id": 8,
+    "name": "Stable Diffusion XL",
+    "category": "image",
+    "description": "Open-source image generation model for custom pipelines and apps.",
+    "tags": ["Image", "Open Source"],
+    "rating": 4.5,
+    "pricing": "Free",
+    "link": "https://stability.ai"
+  },
+  {
+    "id": 9,
+    "name": "Leonardo AI",
+    "category": "image",
+    "description": "Image generation focused on game assets, product renders, and presets.",
+    "tags": ["Image", "Gaming", "Design"],
+    "rating": 4.5,
+    "pricing": "Free + Paid",
+    "link": "https://leonardo.ai"
+  },
+  {
+    "id": 10,
+    "name": "Canva AI",
+    "category": "image",
+    "description": "Magic Media features in Canva for images, video, and design suggestions.",
+    "tags": ["Design", "Marketing"],
+    "rating": 4.4,
+    "pricing": "Free + Paid",
+    "link": "https://www.canva.com"
+  },
+
+  /* CODE TOOLS */
+  {
+    "id": 11,
+    "name": "GitHub Copilot",
+    "category": "code",
+    "description": "AI pair-programmer for VS Code and GitHub that suggests code as you type.",
+    "tags": ["Coding", "IDE"],
+    "rating": 4.7,
+    "pricing": "Paid",
+    "link": "https://github.com/features/copilot",
+    "featured": true
+  },
+  {
+    "id": 12,
+    "name": "Codeium",
+    "category": "code",
+    "description": "Free AI code completion and chat for multiple IDEs.",
+    "tags": ["Coding", "Completion"],
+    "rating": 4.5,
+    "pricing": "Free",
+    "link": "https://codeium.com"
+  },
+  {
+    "id": 13,
+    "name": "Replit Ghostwriter",
+    "category": "code",
+    "description": "In-browser AI coding assistant with explanations and test generation.",
+    "tags": ["Coding", "Education"],
+    "rating": 4.4,
+    "pricing": "Paid",
+    "link": "https://replit.com/ghostwriter"
+  },
+  {
+    "id": 14,
+    "name": "Amazon CodeWhisperer",
+    "category": "code",
+    "description": "AI coding companion for AWS devs with security scanning.",
+    "tags": ["AWS", "Coding"],
+    "rating": 4.3,
+    "pricing": "Free + Paid",
+    "link": "https://aws.amazon.com/codewhisperer"
+  },
+  {
+    "id": 15,
+    "name": "Tabnine",
+    "category": "code",
+    "description": "AI code completion tool for teams with private model options.",
+    "tags": ["Coding", "Completion"],
+    "rating": 4.2,
+    "pricing": "Paid",
+    "link": "https://www.tabnine.com"
+  },
+
+  /* VIDEO & AUDIO */
+  {
+    "id": 16,
+    "name": "Descript",
+    "category": "video",
+    "description": "Edit video and audio like a doc, with overdub and AI cleanup.",
+    "tags": ["Video", "Audio", "Podcast"],
+    "rating": 4.6,
+    "pricing": "Paid",
+    "link": "https://www.descript.com",
+    "featured": true
+  },
+  {
+    "id": 17,
+    "name": "Runway",
+    "category": "video",
+    "description": "AI video editing, Gen-1 and Gen-2 video generation, and motion tools.",
+    "tags": ["Video", "Generation"],
+    "rating": 4.5,
+    "pricing": "Paid",
+    "link": "https://runwayml.com"
+  },
+  {
+    "id": 18,
+    "name": "Pictory",
+    "category": "video",
+    "description": "Turn scripts or blog posts into short marketing videos automatically.",
+    "tags": ["Video", "Marketing"],
+    "rating": 4.4,
+    "pricing": "Paid",
+    "link": "https://pictory.ai"
+  },
+  {
+    "id": 19,
+    "name": "Synthesia",
+    "category": "video",
+    "description": "Create AI avatar videos from text with voiceovers in many languages.",
+    "tags": ["Avatar", "Video"],
+    "rating": 4.4,
+    "pricing": "Paid",
+    "link": "https://www.synthesia.io"
+  },
+  {
+    "id": 20,
+    "name": "Opus Clip",
+    "category": "video",
+    "description": "Repurpose long videos into viral short clips automatically.",
+    "tags": ["Shorts", "Repurposing"],
+    "rating": 4.3,
+    "pricing": "Free + Paid",
+    "link": "https://www.opus.pro"
+  },
+  {
+    "id": 21,
+    "name": "Adobe Podcast",
+    "category": "video",
+    "description": "AI audio enhancement and studio tools for podcasters and creators.",
+    "tags": ["Audio", "Podcast"],
+    "rating": 4.3,
+    "pricing": "Free + Paid",
+    "link": "https://podcast.adobe.com"
+  },
+
+  /* BUSINESS & PRODUCTIVITY */
+  {
+    "id": 22,
+    "name": "Notion AI",
+    "category": "business",
+    "description": "AI inside Notion for summarizing, drafting, and reorganizing docs.",
+    "tags": ["Docs", "Productivity"],
+    "rating": 4.5,
+    "pricing": "Paid",
+    "link": "https://www.notion.so/product/ai",
+    "featured": true
+  },
+  {
+    "id": 23,
+    "name": "ClickUp AI",
+    "category": "business",
+    "description": "AI assistant for project management, docs, and meeting notes in ClickUp.",
+    "tags": ["Tasks", "Management"],
+    "rating": 4.4,
+    "pricing": "Paid",
+    "link": "https://clickup.com/ai"
+  },
+  {
+    "id": 24,
+    "name": "Motion",
+    "category": "business",
+    "description": "AI scheduling and task planning that automatically builds your calendar.",
+    "tags": ["Calendar", "Time Management"],
+    "rating": 4.3,
+    "pricing": "Paid",
+    "link": "https://www.usemotion.com"
+  },
+  {
+    "id": 25,
+    "name": "Fireflies.ai",
+    "category": "business",
+    "description": "AI meeting assistant that records, transcribes, and summarizes calls.",
+    "tags": ["Meetings", "Notes"],
+    "rating": 4.4,
+    "pricing": "Free + Paid",
+    "link": "https://fireflies.ai"
+  },
+  {
+    "id": 26,
+    "name": "Otter.ai",
+    "category": "business",
+    "description": "Live transcription and AI notes for meetings and lectures.",
+    "tags": ["Transcription", "Meetings"],
+    "rating": 4.3,
+    "pricing": "Free + Paid",
+    "link": "https://otter.ai"
+  },
+  {
+    "id": 27,
+    "name": "HubSpot AI",
+    "category": "business",
+    "description": "AI tools integrated into HubSpot for email, content, and CRM workflows.",
+    "tags": ["CRM", "Marketing"],
+    "rating": 4.2,
+    "pricing": "Paid",
+    "link": "https://www.hubspot.com"
+  },
+  {
+    "id": 28,
+    "name": "Intercom Fin",
+    "category": "business",
+    "description": "AI support agent that answers customer questions using your help content.",
+    "tags": ["Support", "Chatbot"],
+    "rating": 4.2,
+    "pricing": "Paid",
+    "link": "https://www.intercom.com"
+  }
+]
