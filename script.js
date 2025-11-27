@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Simple, client-side tool "database"
-  const tools = [
+  const TOOLS_URL = "tools.json";
+
+  // Fallback tools if JSON fails to load (e.g. opened via file://)
+  const DEFAULT_TOOLS = [
     {
       id: 1,
       name: "ChatGPT",
       category: "chat",
       description:
-        "Advanced conversational AI for writing, brainstorming, and coding help.",
+        "Advanced conversational AI for writing, brainstorming, research, and coding help.",
       tags: ["Chat", "Writing", "Assistant"],
       rating: 4.9,
       pricing: "Free + Paid",
@@ -14,23 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
       featured: true
     },
     {
-      id: 2,
-      name: "Claude",
-      category: "chat",
-      description:
-        "Helpful AI assistant focused on safety, reasoning, and long-form content.",
-      tags: ["Chat", "Writing"],
-      rating: 4.8,
-      pricing: "Free + Paid",
-      link: "https://claude.ai",
-      featured: true
-    },
-    {
-      id: 3,
+      id: 6,
       name: "Midjourney",
       category: "image",
       description:
-        "AI image generation for stunning artwork, concept design, and creative visuals.",
+        "AI image generation for high-quality artwork, illustration, and concept design.",
       tags: ["Image", "Art"],
       rating: 4.7,
       pricing: "Paid",
@@ -38,37 +28,40 @@ document.addEventListener("DOMContentLoaded", () => {
       featured: true
     },
     {
-      id: 4,
+      id: 11,
       name: "GitHub Copilot",
       category: "code",
       description:
-        "Code completion and AI pair-programmer that speeds up development.",
+        "AI pair-programmer for VS Code and GitHub that suggests code as you type.",
       tags: ["Coding", "IDE"],
-      rating: 4.6,
+      rating: 4.7,
       pricing: "Paid",
-      link: "https://github.com/features/copilot"
+      link: "https://github.com/features/copilot",
+      featured: true
     },
     {
-      id: 5,
+      id: 16,
       name: "Descript",
       category: "video",
       description:
-        "Edit video and audio like a doc, with AI-powered cleanup and overdub.",
-      tags: ["Video", "Audio"],
-      rating: 4.5,
+        "Edit video and audio like a doc, with overdub and AI cleanup.",
+      tags: ["Video", "Audio", "Podcast"],
+      rating: 4.6,
       pricing: "Paid",
-      link: "https://www.descript.com"
+      link: "https://www.descript.com",
+      featured: true
     },
     {
-      id: 6,
+      id: 22,
       name: "Notion AI",
       category: "business",
       description:
-        "AI inside Notion for summarizing, drafting, and organizing knowledge.",
-      tags: ["Productivity", "Docs"],
-      rating: 4.4,
+        "AI inside Notion for summarizing, drafting, and reorganizing docs.",
+      tags: ["Docs", "Productivity"],
+      rating: 4.5,
       pricing: "Paid",
-      link: "https://www.notion.so/product/ai"
+      link: "https://www.notion.so/product/ai",
+      featured: true
     }
   ];
 
@@ -87,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const primaryNav = document.getElementById("primary-nav");
   const submitForm = document.getElementById("submit-form");
 
+  let tools = [];
   let activeCategory = "all";
   let searchTerm = "";
 
@@ -158,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const rating = document.createElement("span");
       rating.className = "tool-card__rating";
-      rating.textContent = `⭐ ${tool.rating.toFixed(1)} / 5`;
+      rating.textContent = `⭐ ${Number(tool.rating).toFixed(1)} / 5`;
 
       const pricing = document.createElement("span");
       pricing.className = "tool-card__pricing";
@@ -171,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const tagsWrapper = document.createElement("div");
       tagsWrapper.className = "tool-card__tags";
 
-      tool.tags.forEach((tag) => {
+      (tool.tags || []).forEach((tag) => {
         const tagEl = document.createElement("span");
         tagEl.className = "tool-card__tag";
         tagEl.textContent = tag;
@@ -241,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Simple submit-form UX (no real backend)
+  // Simple submit-form UX (no backend)
   if (submitForm) {
     submitForm.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -252,6 +246,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Initial render
-  renderTools();
+  // Load tools from JSON, with fallback
+  async function loadTools() {
+    try {
+      const response = await fetch(TOOLS_URL);
+      if (!response.ok) {
+        throw new Error("Network error loading tools.json");
+      }
+      const data = await response.json();
+      if (!Array.isArray(data)) {
+        throw new Error("tools.json is not an array");
+      }
+      tools = data;
+    } catch (error) {
+      console.error("[AI Tool Hub] Failed to load tools.json, using defaults:", error);
+      tools = DEFAULT_TOOLS;
+    }
+
+    renderTools();
+  }
+
+  loadTools();
 });
