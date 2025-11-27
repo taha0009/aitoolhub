@@ -159,3 +159,233 @@
             </button>
             <button
               class="filter-tab"
+              type="button"
+              data-category="code"
+            >
+              Code &amp; Dev
+            </button>
+            <button
+              class="filter-tab"
+              type="button"
+              data-category="video"
+            >
+              Video &amp; Audio
+            </button>
+            <button
+              class="filter-tab"
+              type="button"
+              data-category="business"
+            >
+              Business &amp; Productivity
+            </button>
+          </div>
+
+          <div class="filters-row__search">
+            <label class="search-field">
+              <span class="search-field__label">Search tools</span>
+              <input
+                id="tool-search"
+                type="search"
+                placeholder="Search by name or feature..."
+                aria-label="Search tools by name or feature"
+              />
+            </label>
+          </div>
+        </div>
+
+        <!-- Tools grid populated by script.js -->
+        <div
+          id="tools-grid"
+          class="tools-grid"
+          aria-live="polite"
+        ></div>
+      </section>
+
+      <!-- AD SLOT -->
+      <aside
+        class="ad-slot"
+        aria-label="Advertisement - replace with your ad code"
+      >
+        <span class="ad-slot__badge">Ad</span>
+        <p>Ad Space – Between Tool Sections</p>
+        <p class="ad-slot__hint">
+          Ideal for leaderboard or in-feed banner placements.
+        </p>
+      </aside>
+
+      <!-- SUBMIT TOOL -->
+      <section
+        id="submit-tool"
+        class="section section--accent"
+        aria-labelledby="submit-heading"
+      >
+        <header class="section__header">
+          <h2 id="submit-heading" class="section__title">
+            Can&apos;t Find What You&apos;re Looking For?
+          </h2>
+          <p class="section__subtitle">
+            Submit your favorite AI tool and get featured in our directory.
+            Reach thousands of AI enthusiasts daily.
+          </p>
+        </header>
+
+        <div class="submit-card">
+          <form class="submit-form" id="submit-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="tool-name">Tool Name</label>
+                <input
+                  type="text"
+                  id="tool-name"
+                  name="toolName"
+                  required
+                  placeholder="e.g. SuperAI Writer"
+                />
+              </div>
+              <div class="form-field">
+                <label for="tool-url">Website URL</label>
+                <input
+                  type="url"
+                  id="tool-url"
+                  name="toolUrl"
+                  required
+                  placeholder="https://"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="tool-category">Category</label>
+                <select id="tool-category" name="category" required>
+                  <option value="">Select a category</option>
+                  <option value="chat">Chat &amp; Writing</option>
+                  <option value="image">Image Generation</option>
+                  <option value="code">Code &amp; Dev</option>
+                  <option value="video">Video &amp; Audio</option>
+                  <option value="business">Business &amp; Productivity</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="tool-description">Short Description</label>
+              <textarea
+                id="tool-description"
+                name="description"
+                rows="3"
+                placeholder="Tell us what this tool does in 1–2 sentences."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary">
+              Submit Tool
+            </button>
+            <p class="form-hint">
+              This is a demo form only. Hook it up to your backend or a form
+              service (e.g. Formspree, Getform) to start collecting submissions.
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- AD SLOT -->
+      <aside
+        class="ad-slot"
+        aria-label="Advertisement - replace with your ad code"
+      >
+        <span class="ad-slot__badge">Ad</span>
+        <p>Ad Space – Footer Top</p>
+        <p class="ad-slot__hint">
+          Great placement for sponsors or newsletter promotions.
+        </p>
+      </aside>
+
+      <!-- GUIDES PLACEHOLDER -->
+      <section
+        id="guides"
+        class="section"
+        aria-labelledby="guides-heading"
+      >
+        <header class="section__header">
+          <h2 id="guides-heading" class="section__title">
+            Guides &amp; Resources (Coming Soon)
+          </h2>
+          <p class="section__subtitle">
+            Soon you&apos;ll find in-depth guides, comparisons, and tutorials to
+            help you choose and implement the right AI tools.
+          </p>
+        </header>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="about" class="footer">
+      <div class="footer__inner">
+        <section class="footer__col footer__col--wide">
+          <h3 class="footer__title">About</h3>
+          <p class="footer__text">
+            AI Tool Hub helps you discover, compare, and review the best AI
+            tools across every category — from chat and writing to code,
+            design, video, and business productivity.
+          </p>
+          <ul class="footer__links">
+            <li>
+              <a href="#about">About AI Tool Hub</a>
+            </li>
+            <li>
+              <a href="mailto:contact@aitoolhub.com">Contact Us</a>
+            </li>
+            <li>
+              <a href="#submit-tool">Advertise With Us</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer__col">
+          <h3 class="footer__title">Categories</h3>
+          <ul class="footer__links">
+            <li>Chat &amp; Writing AI</li>
+            <li>Image Generation</li>
+            <li>Code Assistants</li>
+            <li>Video Tools</li>
+          </ul>
+        </section>
+
+        <section class="footer__col">
+          <h3 class="footer__title">Resources</h3>
+          <ul class="footer__links">
+            <li>AI Guides</li>
+            <li>Comparisons</li>
+            <li>Tutorials</li>
+            <li>Blog</li>
+          </ul>
+        </section>
+
+        <section class="footer__col">
+          <h3 class="footer__title">Popular Tools</h3>
+          <ul class="footer__links">
+            <li>ChatGPT</li>
+            <li>Claude</li>
+            <li>Midjourney</li>
+            <li>GitHub Copilot</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2025 AI Tool Hub. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Sitemap</a>
+          <span aria-hidden="true">•</span>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
