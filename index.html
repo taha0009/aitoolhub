@@ -1,801 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the best AI tools in 2025. Expert reviews, comparisons, and guides for ChatGPT, Claude, Midjourney, and 1000+ AI applications. Stay ahead with trending AI technology.">
-    <meta name="keywords" content="AI tools, artificial intelligence, ChatGPT, best AI tools 2025, AI applications, machine learning tools, AI software">
-    <meta name="author" content="AI Tool Hub">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="theme-color" content="#0f172a">
-    <meta property="og:title" content="Best AI Tools 2025 | AI Tool Hub - #1 Resource">
-    <meta property="og:description" content="Discover 1000+ AI tools with expert reviews and comparisons. Find the perfect AI solution for your needs.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://aitoolhub-red.vercel.app/">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1677442d019cecf3da2155dcf3a69b0b?w=1200&h=630&fit=crop">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Best AI Tools 2025 | AI Tool Hub">
-    <meta name="twitter:description" content="Discover 1000+ AI tools with expert reviews and comparisons.">
-    
-    <link rel="canonical" href="https://aitoolhub-red.vercel.app/">
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%230f172a'>⚡</text></svg>">
-    
-    <title>Best AI Tools 2025 | AI Tool Hub - Compare & Review 1000+ Solutions</title>
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        :root {
-            --primary: #0f172a;
-            --accent: #3b82f6;
-            --accent-light: #60a5fa;
-            --bg: #0f172a;
-            --text: #f1f5f9;
-            --text-secondary: #cbd5e1;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --border: #1e293b;
-        }
-        
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* Header & Navigation */
-        header {
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            sticky: top;
-            z-index: 1000;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-        }
-        
-        .logo {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--accent);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        
-        .logo span { color: var(--text); }
-        
-        nav {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-        
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover { color: var(--accent); }
-        
-        .search-box {
-            background: var(--border);
-            border: 1px solid #334155;
-            padding: 10px 15px;
-            border-radius: 8px;
-            color: var(--text);
-            width: 250px;
-            font-size: 14px;
-        }
-        
-        .search-box::placeholder { color: var(--text-secondary); }
-        
-        /* Hero Section */
-        .hero {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .hero h1 {
-            font-size: clamp(36px, 6vw, 64px);
-            font-weight: 900;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            padding: 14px 32px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background: var(--accent-light);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(59, 130, 246, 0.1);
-        }
-        
-        /* Stats Section */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            padding: 60px 0;
-            text-align: center;
-        }
-        
-        .stat-item h3 { font-size: 32px; color: var(--accent); margin-bottom: 10px; }
-        .stat-item p { color: var(--text-secondary); }
-        
-        /* Filter & Category Section */
-        .filters {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin: 40px 0;
-            padding: 20px;
-            background: rgba(30, 41, 59, 0.5);
-            border-radius: 8px;
-        }
-        
-        .filter-btn {
-            padding: 8px 16px;
-            background: var(--border);
-            border: 1px solid #334155;
-            color: var(--text-secondary);
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 500;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: white;
-        }
-        
-        /* Tools Grid */
-        .tools-section {
-            padding: 60px 0;
-        }
-        
-        .section-title {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: var(--text);
-        }
-        
-        .section-subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            font-size: 16px;
-        }
-        
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-        
-        .tool-card {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 25px;
-            cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .tool-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-            transition: left 0.5s;
-            z-index: -1;
-        }
-        
-        .tool-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
-        }
-        
-        .tool-card:hover::before { left: 100%; }
-        
-        .tool-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 15px;
-        }
-        
-        .tool-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-        }
-        
-        .tool-badge {
-            background: var(--success);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-        
-        .tool-name {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text);
-            margin: 15px 0;
-        }
-        
-        .tool-description {
-            color: var(--text-secondary);
-            font-size: 14px;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-        
-        .tool-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 15px;
-            border-top: 1px solid var(--border);
-        }
-        
-        .tool-rating {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 14px;
-        }
-        
-        .tool-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        
-        .tool-link:hover { color: var(--accent-light); }
-        
-        /* Ad Spaces - AdSense Compliant */
-        .ad-space {
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            margin: 40px 0;
-            min-height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-            padding: 60px 20px;
-            border-radius: 12px;
-            text-align: center;
-            margin: 60px 0;
-            color: white;
-        }
-        
-        .cta-section h2 { font-size: 32px; margin-bottom: 20px; }
-        .cta-section p { font-size: 16px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
-        
-        /* Footer */
-        footer {
-            background: #000;
-            border-top: 1px solid var(--border);
-            padding: 60px 0 30px;
-            margin-top: 80px;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-section h3 {
-            color: var(--accent);
-            margin-bottom: 15px;
-            font-size: 16px;
-            font-weight: 700;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 14px;
-            line-height: 2;
-            transition: color 0.3s;
-        }
-        
-        .footer-section a:hover { color: var(--accent); }
-        
-        .footer-bottom {
-            border-top: 1px solid var(--border);
-            padding-top: 30px;
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-        
-        /* SEO Optimized Breadcrumb */
-        .breadcrumb {
-            padding: 15px 0;
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
-        
-        .breadcrumb a {
-            color: var(--accent);
-            text-decoration: none;
-            margin: 0 8px;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav { gap: 15px; }
-            .search-box { width: 150px; }
-            .hero { padding: 50px 0; }
-            .hero h1 { font-size: 32px; }
-            .tools-grid { grid-template-columns: 1fr; }
-            .cta-section { padding: 40px 20px; }
-            .footer-grid { grid-template-columns: 1fr; }
-        }
-        
-        @media (max-width: 480px) {
-            nav { flex-direction: column; gap: 10px; }
-            .search-box { display: none; }
-            .hero-buttons { flex-direction: column; }
-            .hero h1 { font-size: 24px; }
-        }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .tool-card { animation: fadeIn 0.6s ease-out forwards; }
-        
-        /* Accessibility */
-        :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-        
-        /* Performance - Lazy Loading */
-        img { loading: lazy; }
-    </style>
-</head>
-<body>
-    <!-- Schema Markup for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "AI Tool Hub",
-        "description": "Discover the best AI tools and applications in 2025",
-        "url": "https://aitoolhub-red.vercel.app/",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://aitoolhub-red.vercel.app/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    }
-    </script>
-    
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="/" class="logo">⚡ <span>AI Tool Hub</span></a>
-                <nav>
-                    <a href="#trending">Trending</a>
-                    <a href="#categories">Categories</a>
-                    <a href="#guides">Guides</a>
-                    <a href="#about">About</a>
-                    <input type="text" class="search-box" placeholder="Search 1000+ AI tools...">
-                </nav>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Best AI Tools 2025 | AI Tool Hub - Compare &amp; Review 1000+ Solutions
+    </title>
+    <meta
+      name="description"
+      content="AI Tool Hub helps you discover, compare, and review the best AI tools in 2025 across chat, image, code, video, and business productivity."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph / SEO basics -->
+    <meta property="og:title" content="Best AI Tools 2025 | AI Tool Hub" />
+    <meta
+      property="og:description"
+      content="Discover 1000+ AI tools, compare features, and find the perfect AI solution for your use case."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aitoolhub-red.vercel.app/" />
+    <link rel="canonical" href="https://aitoolhub-red.vercel.app/" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="/" class="logo">
+          <span class="logo__icon" aria-hidden="true">⚡</span>
+          <span class="logo__text">AI Tool Hub</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav
+          class="site-nav"
+          id="primary-nav"
+          aria-label="Primary navigation"
+        >
+          <ul class="site-nav__list">
+            <li><a href="#trending" class="site-nav__link">Trending</a></li>
+            <li><a href="#categories" class="site-nav__link">Categories</a></li>
+            <li><a href="#guides" class="site-nav__link">Guides</a></li>
+            <li><a href="#about" class="site-nav__link">About</a></li>
+          </ul>
+        </nav>
+
+        <a href="#submit-tool" class="header-cta">Submit Your Tool</a>
+      </div>
     </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Discover the Best AI Tools in 2025</h1>
-            <p>Explore 1000+ cutting-edge AI applications, compare features, read expert reviews, and find the perfect solution for your needs</p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="document.getElementById('tools').scrollIntoView()">Browse Tools</button>
-                <button class="btn btn-secondary" onclick="alert('Submit tool form coming soon!')">Submit Your Tool</button>
+
+    <main id="main" class="main">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero__content">
+          <h1 id="hero-heading" class="hero__title">
+            Discover the Best AI Tools in
+            <span class="hero__highlight">2025</span>
+          </h1>
+          <p class="hero__subtitle">
+            Explore 1000+ cutting-edge AI applications, compare features, read
+            expert reviews, and find the perfect solution for your needs.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#trending" class="btn btn--primary">Browse Tools</a>
+            <a href="#submit-tool" class="btn btn--secondary">
+              Submit Your Tool
+            </a>
+          </div>
+
+          <dl class="stats">
+            <div class="stats__item">
+              <dt>1000+</dt>
+              <dd>AI Tools Reviewed</dd>
             </div>
+            <div class="stats__item">
+              <dt>50K+</dt>
+              <dd>Monthly Visitors</dd>
+            </div>
+            <div class="stats__item">
+              <dt>15+</dt>
+              <dd>Categories Covered</dd>
+            </div>
+            <div class="stats__item">
+              <dt>4.9★</dt>
+              <dd>User Rating</dd>
+            </div>
+          </dl>
         </div>
-    </section>
-    
-    <!-- Stats Section -->
-    <section class="container">
-        <div class="stats">
-            <div class="stat-item">
-                <h3>1000+</h3>
-                <p>AI Tools Reviewed</p>
-            </div>
-            <div class="stat-item">
-                <h3>50K+</h3>
-                <p>Monthly Visitors</p>
-            </div>
-            <div class="stat-item">
-                <h3>15+</h3>
-                <p>Categories Covered</p>
-            </div>
-            <div class="stat-item">
-                <h3>4.9★</h3>
-                <p>User Rating</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Ad Space 1 -->
-    <div class="container">
-        <div class="ad-space">
-            <!-- Replace with your AdSense code -->
-            <p>Ad Space - 300x250 or 728x90 (Replace with your Google AdSense code)</p>
-        </div>
-    </div>
-    
-    <!-- Tools Section -->
-    <section class="tools-section" id="tools">
-        <div class="container">
-            <h2 class="section-title">🔥 Trending AI Tools</h2>
-            <p class="section-subtitle">Most popular AI tools right now - used by millions worldwide</p>
-            
-            <div class="filters">
-                <button class="filter-btn active" onclick="filterTools('all')">All Tools</button>
-                <button class="filter-btn" onclick="filterTools('chat')">Chat & Writing</button>
-                <button class="filter-btn" onclick="filterTools('image')">Image Generation</button>
-                <button class="filter-btn" onclick="filterTools('code')">Code & Dev</button>
-                <button class="filter-btn" onclick="filterTools('video')">Video & Audio</button>
-                <button class="filter-btn" onclick="filterTools('business')">Business & Productivity</button>
-            </div>
-            
-            <div class="tools-grid" id="toolsGrid">
-                <!-- Tools will be populated here -->
-            </div>
-        </div>
-    </section>
-    
-    <!-- Ad Space 2 -->
-    <div class="container">
-        <div class="ad-space">
-            <p>Ad Space - 300x250 or 728x90 (Replace with your Google AdSense code)</p>
-        </div>
-    </div>
-    
-    <!-- CTA Section -->
-    <section class="container">
-        <div class="cta-section">
-            <h2>Can't Find What You're Looking For?</h2>
-            <p>Submit your favorite AI tool and get featured in our directory. Reach thousands of AI enthusiasts daily.</p>
-            <button class="btn btn-primary" style="background: white; color: #3b82f6;" onclick="alert('Tool submission form coming soon!')">Submit Tool</button>
-        </div>
-    </section>
-    
-    <!-- Ad Space 3 -->
-    <div class="container">
-        <div class="ad-space">
-            <p>Ad Space - 300x250 or 728x90 (Replace with your Google AdSense code)</p>
-        </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>About</h3>
-                    <ul>
-                        <li><a href="#">About AI Tool Hub</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Advertise With Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Categories</h3>
-                    <ul>
-                        <li><a href="#">Chat & Writing AI</a></li>
-                        <li><a href="#">Image Generation</a></li>
-                        <li><a href="#">Code Assistants</a></li>
-                        <li><a href="#">Video Tools</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#">AI Guides</a></li>
-                        <li><a href="#">Comparisons</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Popular Tools</h3>
-                    <ul>
-                        <li><a href="#">ChatGPT</a></li>
-                        <li><a href="#">Claude</a></li>
-                        <li><a href="#">Midjourney</a></li>
-                        <li><a href="#">Copilot</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 AI Tool Hub. All rights reserved. | <a href="#" style="color: var(--accent); text-decoration: none;">Sitemap</a> | <a href="#" style="color: var(--accent); text-decoration: none;">Terms</a></p>
-            </div>
-        </div>
-    </footer>
-    
-    <script>
-        // AI Tools Database - Comprehensive
-        const aiTools = [
-            {
-                name: "ChatGPT",
-                category: "chat",
-                description: "Advanced AI chatbot for writing, coding, analysis, and creative tasks powered by GPT-4.",
-                rating: "4.9",
-                url: "#",
-                badge: "Most Popular"
-            },
-            {
-                name: "Claude AI",
-                category: "chat",
-                description: "Constitutional AI assistant excelling in analysis, writing, and coding with long context windows.",
-                rating: "4.8",
-                url: "#",
-                badge: "Latest"
-            },
-            {
-                name: "Midjourney",
-                category: "image",
-                description: "Premium AI image generation creating stunning visuals from text descriptions with exceptional quality.",
-                rating: "4.7",
-                url: "#",
-                badge: "Popular"
-            },
-            {
-                name: "DALL-E 3",
-                category: "image",
-                description: "OpenAI's latest image generation model creating highly realistic and creative images from prompts.",
-                rating: "4.6",
-                url: "#",
-                badge: "Trending"
-            },
-            {
-                name: "GitHub Copilot",
-                category: "code",
-                description: "AI-powered code completion and generation tool for accelerating software development.",
-                rating: "4.8",
-                url: "#",
-                badge: "Popular"
-            },
-            {
-                name: "Tabnine",
-                category: "code",
-                description: "Enterprise-grade AI code completion supporting 30+ programming languages and frameworks.",
-                rating: "4.5",
-                url: "#",
-                badge: "New"
-            },
-            {
-                name: "RunwayML",
-                category: "video",
-                description: "Professional video editing and generation with AI-powered effects and magic tools.",
-                rating: "4.7",
-                url: "#",
-                badge: "Popular"
-            },
-            {
-                name: "Synthesia",
-                category: "video",
-                description: "Create professional videos with AI-generated avatars and voiceovers in minutes.",
-                rating: "4.6",
-                url: "#",
-                badge: "Trending"
-            },
-            {
-                name: "Notion AI",
-                category: "business",
-                description: "AI assistant integrated into Notion for smart document writing and task automation.",
-                rating: "4.4",
-                url: "#",
-                badge: "Popular"
-            },
-            {
-                name: "Jasper",
-                category: "business",
-                description: "AI copywriting platform for creating marketing content, emails, and social media posts.",
-                rating: "4.5",
-                url: "#",
-                badge: "Trending"
-            },
-            {
-                name: "Perplexity AI",
-                category: "chat",
-                description: "AI search engine providing detailed, cited answers with real-time web information.",
-                rating: "4.6",
-                url: "#",
-                badge: "Latest"
-            },
-            {
-                name: "Grammarly",
-                category: "business",
-                description: "AI writing assistant for grammar, tone, and style improvement across all platforms.",
-                rating: "4.7",
-                url: "#",
-                badge: "Popular"
-            }
-        ];
-        
-        let currentFilter = 'all';
-        
-        function renderTools(filter = 'all') {
-            const grid = document.getElementById('toolsGrid');
-            const filtered = filter === 'all' 
-                ? aiTools 
-                : aiTools.filter(tool => tool.category === filter);
-            
-            grid.innerHTML = filtered.map((tool, idx) => `
-                <div class="tool-card" style="animation-delay: ${idx * 0.1}s">
-                    <div class="tool-header">
-                        <div class="tool-icon">🤖</div>
-                        <span class="tool-badge">${tool.badge}</span>
-                    </div>
-                    <h3 class="tool-name">${tool.name}</h3>
-                    <p class="tool-description">${tool.description}</p>
-                    <div class="tool-footer">
-                        <span class="tool-rating">⭐ ${tool.rating}</span>
-                        <a href="${tool.url}" class="tool-link">Learn More →</a>
-                    </div>
-                </div>
-            `).join('');
-        }
-        
-        function filterTools(category) {
-            currentFilter = category;
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            renderTools(category);
-        }
-        
-        // Initial render
-        renderTools();
-        
-        // Search functionality
-        document.querySelector('.search-box').addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            const grid = document.getElementById('toolsGrid');
-            const filtered = aiTools.filter(tool => 
-                tool.name.toLowerCase().includes(query) || 
-                tool.description.toLowerCase().includes(query)
-            );
-            
-            grid.innerHTML = filtered.length ? 
-                filtered.map((tool, idx) => `
-                    <div class="tool-card" style="animation-delay: ${idx * 0.1}s">
-                        <div class="tool-header">
-                            <div class="tool-icon">🤖</div>
-                            <span class="tool-badge">${tool.badge}</span>
-                        </div>
-                        <h3 class="tool-name">${tool.name}</h3>
-                        <p class="tool-description">${tool.description}</p>
-                        <div class="tool-footer">
-                            <span class="tool-rating">⭐ ${tool.rating}</span>
-                            <a href="${tool.url}" class="tool-link">Learn More →</a>
-                        </div>
-                    </div>
-                `).join('')
-                : '<p style="grid-column: 1/-1; text-align: center; color: var(--text-secondary);">No tools found matching your search.</p>';
-        });
-        
-        // Performance: Intersection Observer for lazy loading
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-            
-            document.querySelectorAll('.tool-card').forEach(card => {
-                card.style.opacity = '0';
-                observer.observe(card);
-            });
-        }
-    </script>
-</body>
-</html>
+      </section>
+
+      <!-- AD SLOT -->
+      <aside
+        class="ad-slot"
+        aria-label="Advertisement - replace with your ad code"
+      >
+        <span class="ad-slot__badge">Ad</span>
+        <p>Ad Space – 300x250 or 728x90</p>
+        <p class="ad-slot__hint">
+          Replace this entire box with your Google AdSense snippet.
+        </p>
+      </aside>
+
+      <!-- TRENDING TOOLS -->
+      <section
+        id="trending"
+        class="section"
+        aria-labelledby="trending-heading"
+      >
+        <header class="section__header">
+          <h2 id="trending-heading" class="section__title">
+            Trending AI Tools
+          </h2>
+          <p class="section__subtitle">
+            Most popular AI tools right now — used by millions worldwide.
+          </p>
+        </header>
+
+        <div class="filters-row" id="categories">
+          <div
+            class="filter-tabs"
+            role="tablist"
+            aria-label="AI tool categories"
+          >
+            <button
+              class="filter-tab filter-tab--active"
+              type="button"
+              data-category="all"
+            >
+              All Tools
+            </button>
+            <button
+              class="filter-tab"
+              type="button"
+              data-category="chat"
+            >
+              Chat &amp; Writing
+            </button>
+            <button
+              class="filter-tab"
+              type="button"
+              data-category="image"
+            >
+              Image Generation
+            </button>
+            <button
+              class="filter-tab"
